@@ -1,17 +1,13 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Menu, ChevronDown, ArrowRight, Github, Linkedin, Mail, Code, Database, Globe, BarChart3, User } from 'lucide-react';
+import { Menu, ChevronDown, Github, Linkedin, Mail, Code, Database, Globe, BarChart3, User } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const MainContent = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, -50]);
-
-  const [currentRole, setCurrentRole] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
 
   const roles = [
     'Developer',
@@ -19,20 +15,6 @@ const MainContent = () => {
     'Engineer'
   ];
 
-  // Animated rotating text effect with typing animation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTyping(false);
-      setTimeout(() => {
-        setCurrentRole((prev) => (prev + 1) % roles.length);
-        setTimeout(() => {
-          setIsTyping(true);
-        }, 300);
-      }, 800);
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, [roles.length]);
 
   // Track active section for navigation
   useEffect(() => {
@@ -213,7 +195,7 @@ const MainContent = () => {
               { id: 'skills', icon: BarChart3, label: 'Skills', active: activeSection === 'skills' },
               { id: 'projects', icon: Globe, label: 'Projects', active: activeSection === 'projects' },
               { id: 'contact', icon: Mail, label: 'Contact', active: activeSection === 'contact' },
-            ].map((item, index) => (
+            ].map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -333,9 +315,9 @@ const MainContent = () => {
             viewport={{ once: true }}
             className="text-lg text-gray-400 leading-relaxed mb-8"
           >
-            Since beginning my journey as a software engineer nearly 18 years ago, I've done remote work for agencies, 
+            Since beginning my journey as a software engineer nearly 18 years ago, I&apos;ve done remote work for agencies, 
             consulted for startups, and collaborated with talented people to create digital products for both business 
-            and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops 
+            and consumer use. I&apos;m quietly confident, naturally curious, and perpetually working on improving my chops 
             one design problem at a time.
           </motion.p>
           </motion.div>
@@ -883,7 +865,7 @@ const MainContent = () => {
                 viewport={{ once: true }}
                 className="text-lg text-gray-400 leading-relaxed mb-8"
               >
-                Have a project in mind or want to collaborate? I'd love to hear from you!
+                Have a project in mind or want to collaborate? I&apos;d love to hear from you!
               </motion.p>
               <div className="space-y-4">
                 {[

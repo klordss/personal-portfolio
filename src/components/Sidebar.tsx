@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Twitter, Instagram } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Instagram } from 'lucide-react';
+import Image from 'next/image';
 
 const Sidebar = () => {
   const currentYear = new Date().getFullYear();
@@ -50,9 +51,11 @@ const Sidebar = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="w-96 h-96 mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl"
           >
-            <img 
+            <Image 
               src="/profile.jpg" 
               alt="Josue Salinas" 
+              width={384}
+              height={384}
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -79,7 +82,7 @@ const Sidebar = () => {
             className="mb-8"
           >
             <div className="flex space-x-6 justify-center">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
@@ -106,7 +109,7 @@ const Sidebar = () => {
             className="w-full bg-emerald-500 text-white py-5 px-6 rounded-xl font-semibold text-xl shadow-lg hover:shadow-xl hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center mb-6"
           >
             <Mail className="w-6 h-6 mr-3" />
-            Let's Contact
+            Let&apos;s Contact
           </motion.button>
 
           {/* Copyright */}
