@@ -126,7 +126,7 @@ const Experience = () => {
             Experience
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            My professional journey and the impact I've made along the way
+            My professional journey and the impact I&apos;ve made along the way
           </p>
         </motion.div>
 

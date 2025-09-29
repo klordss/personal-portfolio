@@ -136,7 +136,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-emerald-300 font-medium"
             >
-              Hello, I'm
+              Hello, I&apos;m
             </motion.div>
 
             {/* Main Headline */}
@@ -161,7 +161,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 font-light h-16 flex items-center justify-center lg:justify-start"
             >
-              <span className="mr-3">I'm a</span>
+              <span className="mr-3">I&apos;m a</span>
               <span className="relative inline-block min-w-[200px]">
                 <motion.span
                   key={currentRole}
@@ -244,7 +244,7 @@ const Hero = () => {
                 { icon: Github, href: 'https://github.com/josuesalinas', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://linkedin.com/in/josuesalinas', label: 'LinkedIn' },
                 { icon: Mail, href: 'mailto:Jsalinas.us@gmail.com', label: 'Email' },
-              ].map((social, index) => (
+              ].map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}

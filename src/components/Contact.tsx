@@ -28,7 +28,7 @@ const Contact = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    alert('Thank you for your message! I&apos;ll get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
     setIsSubmitting(false);
   };
@@ -89,7 +89,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you!
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you!
           </p>
         </motion.div>
 
@@ -103,9 +103,9 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Let&apos;s Connect</h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                I'm always interested in new opportunities and exciting projects.
+                I&apos;m always interested in new opportunities and exciting projects.
                 Whether you have a question, want to collaborate, or just want to say hi,
                 feel free to reach out!
               </p>

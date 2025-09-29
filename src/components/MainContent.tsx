@@ -1,19 +1,12 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Menu, ChevronDown, Github, Linkedin, Mail, Code, Database, Globe, BarChart3, User } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const MainContent = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
-
-  const roles = [
-    'Developer',
-    'Designer',
-    'Engineer'
-  ];
 
 
   // Track active section for navigation
